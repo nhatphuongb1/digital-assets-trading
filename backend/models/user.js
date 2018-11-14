@@ -5,7 +5,7 @@ var UserSchema = new Schema({
     username: {type:String,required:true},
     password:{type:String,required:true},
     email:{type:String,required:true},
-    ethereum_address:{type:String, required:true},
+    eth_wallet:{type:String, required:true},
 });
 
 UserSchema

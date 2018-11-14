@@ -8,8 +8,8 @@ var TokenSchema = new Schema(
         name:{type:String,required:true},
         symbol:{type:String,required:true},
         price:{
-            ETH:{type:number},
-            USD:{type:number,require:true}
+            ETH:{type:Number},
+            USD:{type:Number,require:true}
         },
         contract_address:{type:String,required:true},
         owner_address:{type:String},

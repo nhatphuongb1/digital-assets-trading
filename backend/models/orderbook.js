@@ -5,10 +5,10 @@ var OrderBookSchema = new Schema({
     makerId:{type:Schema.Types.ObjectId,ref:'User', required:true},
     tokenId:{type:Schema.Types.ObjectId,ref:'Token',required:true},
     type: {type:String,required:true,enum:['Buy','Sell']},
-    price:{type:number,required:true},
-    amount:{type:number,required:true},
+    price:{type:Number,required:true,default:0},
+    amount:{type:Number,required:true,default:0},
     status:{type:String,required:true,enum:['Pending','Canceled','Complete'],default:'Pending'},
-    createAt:{type:Date,required:true},
+    createAt:{type:Date},
     modifiedHistory:{
         modifiedAt:{type:Date},
         contents:{type:String}
@@ -16,8 +16,8 @@ var OrderBookSchema = new Schema({
     transaction:
     {
         taker:{type:Schema.Types.ObjectId, ref:'User',required:true},
-        amount:{type:number},
-        price:{type:number},
+        amount:{type:Number},
+        price:{type:Number},
         time: {type:Date}
     }
 });
